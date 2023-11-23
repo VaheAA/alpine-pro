@@ -1,0 +1,570 @@
+@use '../util' as u;
+@use 'sass:math';
+
+$box-shadow: 10px 0px 25px rgba(60, 50, 50, 0.25),
+  5px 15px 50px rgba(0, 0, 0, 0.25);
+
+$theme-colors: (
+  'primary': #484646,
+  'dark-secondary': #282525,
+  'secondary': #6a6363,
+  'dark': #182f43,
+  'white': #fff,
+  'light': #f3f3f3,
+  'muted': #b4b4b4,
+  'danger': #e31318,
+  'pale': #dedede,
+  'grayish': #fafafa,
+  'dark-blue': #252b42,
+);
+
+$font-family-sans-serif: u.$font;
+
+$form-check-input-checked-bg-image: url("data:image/svg+xml,%3Csvg width='18' height='13' viewBox='0 0 18 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.00023 10.172L16.1922 0.979004L17.6072 2.393L7.00023 13L0.63623 6.636L2.05023 5.222L7.00023 10.172Z' fill='black'/%3E%3C/svg%3E%0A");
+
+@import '~bootstrap/scss/bootstrap';
+
+$utilities: map-merge(
+  $utilities,
+  (
+    'font-size':
+      map-merge(
+        map-get($utilities, 'font-size'),
+        (
+          responsive: true,
+        )
+      ),
+  ),
+  (
+    'color':
+      map-merge(
+        map-get($utilities, 'color'),
+        (
+          responsive: true,
+        )
+      ),
+  ),
+  (
+    'border-color':
+      map-merge(
+        map-get($utilities, 'border-color'),
+        (
+          responsive: true,
+        )
+      ),
+  ),
+  (
+    'width':
+      map-merge(
+        map-get($utilities, 'width'),
+        (
+          responsive: true,
+        )
+      ),
+  ),
+  (
+    'position':
+      map-merge(
+        map-get($utilities, 'position'),
+        (
+          responsive: true,
+        )
+      ),
+  )
+);
+
+$sizes: (
+  5: 5%,
+  10: 10%,
+  15: 15%,
+  20: 20%,
+  25: 25%,
+  35: 35%,
+  45: 45%,
+  50: 50%,
+  55: 55%,
+  60: 60%,
+  65: 65%,
+  70: 70%,
+  75: 75%,
+  100: 100%,
+  140: 140px,
+  220: 220px,
+  260: 260px,
+  360: 360px,
+  380: 380px,
+  1160: 1160px,
+  auto: auto,
+);
+
+$fonts: (
+  4: 1.5rem,
+  5: 1.25rem,
+  6: 1rem,
+  7: u.rem(14),
+  8: u.rem(12),
+  9: u.rem(10),
+  10: u.rem(8),
+);
+
+$positions: (
+  relative: relative,
+  absolute: absolute,
+  static: static,
+  fixed: fixed,
+);
+
+$utilities: (
+  'width': (
+    responsive: true,
+    property: width,
+    class: w,
+    values: $sizes,
+  ),
+  'height': (
+    responsive: true,
+    property: height,
+    class: h,
+    values: $sizes,
+  ),
+  'position': (
+    responsive: true,
+    property: position,
+    class: position,
+    values: $positions,
+  ),
+  'end': (
+    property: right,
+    class: end,
+    responsive: true,
+    values: (
+      n5: -5%,
+      n10: -10%,
+      1: 1%,
+      2: 2%,
+      5: 5%,
+      10: 10%,
+      15: 15%,
+      25: 25%,
+    ),
+  ),
+  'top': (
+    property: top,
+    class: top,
+    responsive: true,
+    values: (
+      n5: -5%,
+      n10: -10%,
+      1: 1%,
+      2: 2%,
+      5: 5%,
+      10: 10%,
+      15: 15%,
+      25: 25%,
+    ),
+  ),
+  'bottom': (
+    property: bottom,
+    class: bottom,
+    responsive: true,
+    values: (
+      1: 1%,
+      2: 2%,
+      5: 5%,
+      10: 10%,
+      15: 15%,
+      20: 20%,
+      25: 25%,
+    ),
+  ),
+  'start': (
+    property: left,
+    class: start,
+    responsive: true,
+    values: (
+      25: 25%,
+      10: 10%,
+      15: 15%,
+      n10: -10%,
+      n15: -15%,
+      n25: -25%,
+      n30: -30%,
+      n35: -35%,
+      n40: -40%,
+      n45: -45%,
+      n55: -55%,
+      n65: -65%,
+      n150px: -150px,
+    ),
+  ),
+  'mt': (
+    property: margin-top,
+    class: mt,
+    responsive: true,
+    values: (
+      7: u.rem(70),
+      8: u.rem(80),
+      9: u.rem(90),
+      10: u.rem(100),
+      11: u.rem(110),
+      12: u.rem(120),
+      15: u.rem(150),
+      n6: u.rem(-60),
+      n7: u.rem(-70),
+      n8: u.rem(-80),
+      n9: u.rem(-90),
+      n10: u.rem(-100),
+      n11: u.rem(-110),
+      n12: u.rem(-120),
+      n15: u.rem(-150),
+      n17: u.rem(-170),
+      n20: u.rem(-200),
+    ),
+  ),
+  'me': (
+    property: margin-right,
+    class: me,
+    responsive: true,
+    values: (
+      7: u.rem(70),
+      8: u.rem(80),
+      9: u.rem(90),
+      10: u.rem(100),
+      11: u.rem(110),
+      12: u.rem(120),
+      15: u.rem(150),
+      n6: u.rem(-60),
+      n7: u.rem(-70),
+      n8: u.rem(-80),
+      n9: u.rem(-90),
+      n10: u.rem(-100),
+      n11: u.rem(-110),
+      n12: u.rem(-120),
+      n15: u.rem(-150),
+      n17: u.rem(-170),
+      n20: u.rem(-200),
+    ),
+  ),
+  'ms': (
+    property: margin-left,
+    class: ms,
+    responsive: true,
+    values: (
+      7: u.rem(70),
+      8: u.rem(80),
+      9: u.rem(90),
+      10: u.rem(100),
+      11: u.rem(110),
+      12: u.rem(120),
+      15: u.rem(150),
+      n6: u.rem(-60),
+      n7: u.rem(-70),
+      n8: u.rem(-80),
+      n9: u.rem(-90),
+      n10: u.rem(-100),
+      n11: u.rem(-110),
+      n12: u.rem(-120),
+      n15: u.rem(-150),
+      n17: u.rem(-170),
+      n20: u.rem(-200),
+    ),
+  ),
+  'mb': (
+    property: margin-bottom,
+    class: mb,
+    responsive: true,
+    values: (
+      7: u.rem(70),
+      8: u.rem(80),
+      9: u.rem(90),
+      10: u.rem(100),
+      11: u.rem(110),
+      12: u.rem(120),
+      14: u.rem(140),
+      n1: u.rem(-10),
+      n2: u.rem(-20),
+      n3: u.rem(-30),
+      n4: u.rem(-40),
+      n5: u.rem(-50),
+      n6: u.rem(-60),
+      n7: u.rem(-70),
+      n8: u.rem(-80),
+      n9: u.rem(-90),
+      n10: u.rem(-100),
+    ),
+  ),
+  'px': (
+    property: padding-inline,
+    class: px,
+    responsive: true,
+    values: (
+      7: u.rem(70),
+      8: u.rem(80),
+      9: u.rem(90),
+      10: u.rem(100),
+      11: u.rem(110),
+      12: u.rem(120),
+      15: u.rem(150),
+      n6: u.rem(-60),
+      n7: u.rem(-70),
+      n8: u.rem(-80),
+      n9: u.rem(-90),
+      n10: u.rem(-100),
+      n11: u.rem(-110),
+      n12: u.rem(-120),
+      n15: u.rem(-150),
+      n17: u.rem(-170),
+      n20: u.rem(-200),
+    ),
+  ),
+  'pt': (
+    property: padding-top,
+    class: pt,
+    responsive: true,
+    values: (
+      7: u.rem(70),
+      8: u.rem(80),
+      9: u.rem(90),
+      10: u.rem(100),
+      11: u.rem(110),
+      12: u.rem(120),
+      15: u.rem(150),
+      n6: u.rem(-60),
+      n7: u.rem(-70),
+      n8: u.rem(-80),
+      n9: u.rem(-90),
+      n10: u.rem(-100),
+      n11: u.rem(-110),
+      n12: u.rem(-120),
+      n15: u.rem(-150),
+      n17: u.rem(-170),
+      n20: u.rem(-200),
+    ),
+  ),
+  'pb': (
+    property: padding-bottom,
+    class: pb,
+    responsive: true,
+    values: (
+      7: u.rem(70),
+      8: u.rem(80),
+      9: u.rem(90),
+      10: u.rem(100),
+      11: u.rem(110),
+      12: u.rem(120),
+      15: u.rem(150),
+      n6: u.rem(-60),
+      n7: u.rem(-70),
+      n8: u.rem(-80),
+      n9: u.rem(-90),
+      n10: u.rem(-100),
+      n11: u.rem(-110),
+      n12: u.rem(-120),
+      n15: u.rem(-150),
+      n17: u.rem(-170),
+      n20: u.rem(-200),
+    ),
+  ),
+  'gap': (
+    property: gap,
+    class: gap,
+    responsive: true,
+    values: (
+      10: u.rem(100),
+    ),
+  ),
+  'fs': (
+    property: font-size,
+    class: fs,
+    responsive: true,
+    values: $fonts,
+  ),
+);
+
+@import 'bootstrap/scss/bootstrap';
+
+@mixin switch($res: 'sm') {
+  $index: 1rem;
+  $mainVal: 1rem;
+
+  @if $res == 'md' {
+    $index: 2rem;
+    $mainVal: 1.5rem;
+  } @else if $res == 'lg' {
+    $index: 3rem;
+    $mainVal: 2rem;
+  } @else if $res == 'xl' {
+    $index: 4rem;
+    $mainVal: 2.5rem;
+  }
+
+  margin-bottom: math.div($index, 2);
+
+  .form-check-input {
+    height: $mainVal;
+    width: calc(#{$index} + 0.75rem);
+    border-radius: $mainVal * 2;
+  }
+}
+
+.form-check-input {
+  clear: left;
+}
+
+.form-switch.form-switch-sm {
+  @include switch();
+}
+
+.form-switch.form-switch-md {
+  @include switch('md');
+}
+
+.form-switch.form-switch-lg {
+  @include switch('lg');
+}
+
+.form-switch.form-switch-xl {
+  @include switch('xl');
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  content: '>';
+  color: #fff;
+}
+
+.btn-white {
+  &:hover {
+    background-color: #111010 !important;
+    color: #fff !important;
+  }
+}
+
+.form-floating {
+  .form-control {
+    min-height: u.rem(45);
+    height: u.rem(45);
+    max-height: 45px;
+    border: 1px solid rgba(130, 130, 130, 0.4);
+  }
+}
+
+.form-floating > label {
+  top: -6px;
+}
+
+.checkbox-lg .form-check-input {
+  top: 0.8rem;
+  scale: 1.4;
+}
+
+select:invalid {
+  color: #616161 !important;
+  font-weight: bold !important;
+  opacity: 0.75;
+  font-size: 1rem;
+}
+
+[data-checkbox='bank'] {
+  &:checked {
+    background-color: black;
+    padding: 1px;
+  }
+}
+
+a {
+  color: #111010 !important;
+
+  &.active {
+    position: relative;
+    padding-bottom: 5px;
+    color: #616161 !important;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: #616161;
+    }
+  }
+}
+
+.border-dashed {
+  border-style: dashed !important;
+}
+
+.list-style-disc {
+  list-style: disc;
+}
+
+.flex-1 {
+  flex: 1 !important;
+}
+
+.flex-2 {
+  flex: 2 !important;
+}
+
+.flex-3 {
+  flex: 3 !important;
+}
+
+.form-control-lg {
+  font-size: u.rem(16);
+  padding-block: u.rem(10) !important;
+}
+
+textarea:focus,
+input[type='text']:focus,
+input[type='password']:focus,
+input[type='datetime']:focus,
+input[type='datetime-local']:focus,
+input[type='date']:focus,
+input[type='month']:focus,
+input[type='time']:focus,
+input[type='week']:focus,
+input[type='number']:focus,
+input[type='email']:focus,
+input[type='url']:focus,
+input[type='search']:focus,
+input[type='tel']:focus,
+input[type='color']:focus,
+input[type='checkbox']:focus,
+input[type='radio']:focus,
+textarea.form-control:focus,
+.uneditable-input:focus {
+  border-color: rgba(#111010, 0.75);
+  box-shadow: 0 0 1px rgba(#111010, 0.25);
+  outline: 0 none;
+}
+
+[data-input='checkbox-1'] {
+  $form-check-input-checked-bg-image: url("data:image/svg+xml,%3Csvg width='12' height='10' viewBox='0 0 12 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 4L4 8L11 1' stroke='%2322D3C5' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E%0A");
+
+  &:checked {
+    background-image: $form-check-input-checked-bg-image;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+[data-input='checkbox-2'] {
+  position: relative;
+
+  &:checked {
+    &:after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      padding: 10px;
+      margin: 0;
+      left: -5px;
+      top: -5px;
+      border: 2px solid #111010;
+      position: absolute;
+    }
+  }
+}
