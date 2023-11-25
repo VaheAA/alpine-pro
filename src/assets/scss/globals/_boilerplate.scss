@@ -29,6 +29,10 @@ a {
   text-decoration: none !important;
 }
 
+.z-10 {
+  z-index: 10;
+}
+
 .header {
   height: u.rem(80);
 }
@@ -90,6 +94,18 @@ a {
   height: u.rem(618);
   background-image: url('../img/design/mid-banner.jpg');
   background-size: cover;
+}
+
+[data-element='history-banner'] {
+  height: u.rem(668);
+  background-image: url('../img/design/history-banner.jpg');
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+
+  @include u.breakpoint-down(small) {
+    background-position: right center;
+  }
 }
 
 [data-element='product-category'] {
@@ -212,5 +228,13 @@ a {
     @include u.breakpoint-down(small) {
       right: 0 !important;
     }
+  }
+}
+
+[data-element='pin-contaier'] {
+  height: u.rem(624);
+
+  @include u.breakpoint-down(medium) {
+    height: auto !important;
   }
 }
