@@ -68,6 +68,18 @@ a {
   }
 }
 
+.swiper {
+  max-width: u.rem(1300);
+  width: 90%;
+  height: u.rem(415);
+
+  @include u.breakpoint-down(medium) {
+    width: 100%;
+    max-width: 100%;
+    height: auto !important;
+  }
+}
+
 [data-element='hero'] {
   height: u.rem(618);
   background-image: url('../img/design/home-hero.jpg');
@@ -113,6 +125,92 @@ a {
       path {
         fill: #3e8e00;
       }
+    }
+  }
+
+  @include u.breakpoint-down(medium) {
+    width: u.rem(140);
+    max-width: 100%;
+    height: u.rem(140);
+    padding: u.rem(10);
+
+    svg {
+      width: u.rem(80);
+      display: block;
+      transition: all 0.3s ease;
+    }
+  }
+
+  @include u.breakpoint-down(small) {
+    width: u.rem(110);
+    max-width: 100%;
+    height: u.rem(110);
+    padding: u.rem(10);
+
+    svg {
+      width: u.rem(40);
+      display: block;
+      transition: all 0.3s ease;
+    }
+  }
+}
+
+[data-element='slider-card'] {
+  height: u.rem(415);
+
+  @include u.breakpoint-down(medium) {
+    height: auto;
+  }
+
+  img {
+    height: u.rem(220) !important;
+
+    @include u.breakpoint-down(medium) {
+      height: auto !important;
+      width: 90% !important;
+      object-fit: cover;
+    }
+  }
+}
+
+.slider-btn {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+
+  svg {
+    width: u.rem(40);
+  }
+  @include u.breakpoint-down(small) {
+    bottom: 0;
+  }
+
+  &--prev {
+    left: u.rem(20);
+    bottom: 0;
+
+    @include u.breakpoint-down(medium) {
+      left: 0;
+    }
+
+    @include u.breakpoint-down(small) {
+      left: 0;
+    }
+  }
+
+  &--next {
+    right: u.rem(20);
+
+    @include u.breakpoint-down(medium) {
+      right: 0;
+    }
+    @include u.breakpoint-down(small) {
+      right: 0 !important;
     }
   }
 }
