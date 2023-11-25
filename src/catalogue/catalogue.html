@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+  <title>Alpine pro - History</title>
+</head>
+
+<body x-data="catalogue">
+  <header class="py-2 py-md-4 header d-flex align-items-center">
+    <div class="container-xxl d-flex justify-content-between align-items-center">
+      <a
+        href="/"
+        data-element="logo"
+      >
+        <img
+          src="../assets/img/design/logo.png"
+          alt=""
+        >
+      </a>
+      <div class="d-flex align-items-center gap-2 gap-xxl-5">
+        <nav class="d-none d-lg-block">
+          <ul class="d-lg-flex align-items-center gap-4 gap-xxl-5 mb-0">
+            <li>
+              <a
+                href="/"
+                class="text-decoration-none fs-7 fs-lg-6 link-hover text-dark fw-medium"
+              >Home</a>
+            </li>
+            <li>
+              <a
+                href="history.html"
+                class="text-decoration-none fs-7 fs-lg-6 link-hover text-dark fw-medium"
+              >History</a>
+            </li>
+            <li>
+              <a
+                href="catalogue.html"
+                class="text-decoration-none fs-7 fs-lg-6 link-hover text-dark fw-medium"
+              >Products</a>
+            </li>
+          </ul>
+        </nav>
+        <a href="cart.html">
+          <img
+            src="../assets/img/icons/cart.svg"
+            alt=""
+          >
+        </a>
+      </div>
+      <div class="burger">
+        <button
+          id="menu-btn"
+          class="burger__btn"
+        >
+          <span class="burger__line burger__line-top"></span>
+          <span class="burger__line burger__line-middle"></span>
+          <span class="burger__line burger__line-bottom"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div class="mobile-menu">
+    <nav class="mobile-menu__nav">
+      <ul class="mobile-menu__list">
+        <li class="mobile-menu__item">
+          <a
+            href="/"
+            class="mobile-menu__link text-white link-underline-0"
+          >Home</a>
+        </li>
+        <li class="mobile-menu__item">
+          <a
+            href="history.html"
+            class="mobile-menu__link text-white link-underline-0"
+          >History</a>
+        </li>
+        <li class="mobile-menu__item">
+          <a
+            href="catalogue.html"
+            class="mobile-menu__link text-white link-underline-0"
+          >Products</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <main>
+    <!-- banner -->
+    <div data-element="catalogue-banner"></div>
+    <!-- products -->
+    <section
+      class="pt-5 pt-md-10 mb-5 mb-md-14"
+      data-bg="catalogue-filters"
+    >
+      <div class="container-lg">
+        <div class="row flex-column flex-md-row py-3 gap-4 flex-nowrap">
+          <aside class="col col-md-3 text-primary bg-light p-3 text-dark">
+            <form class="d-flex flex-column gap-3">
+              <div class="d-flex align-items-center justify-content-between mb-3">
+                <span class="display-5 fw-bold">Filters</span>
+                <button>Reset all</button>
+              </div>
+              <div class="pb-3">
+                <span class="fs-3 d-block mb-2">Product Type</span>
+                <div class="form-check d-flex align-items-center gap-2 mb-2">
+                  <input
+                    class="form-check-input border-2 bg-white rounded-1 border-primary p-2 text-priary"
+                    type="checkbox"
+                    id="top"
+                    name="top"
+                    value="top"
+                  >
+                  <label
+                    class="form-check-label d-block w-100"
+                    for="top"
+                  >Title here</label>
+                  <span class="d-block text-primary fs-6 ms-auto opacity-75">(122)</span>
+                </div>
+                <div class="form-check d-flex align-items-center gap-2 mb-2">
+                  <input
+                    class="form-check-input border-2 bg-white rounded-1 border-primary p-2"
+                    type="checkbox"
+                    id="bottom"
+                    name="bottom"
+                    value="bottom"
+                  >
+                  <label
+                    class="form-check-label d-block w-100"
+                    for="bottom"
+                  >Title here</label>
+                </div>
+                <div class="form-check d-flex align-items-center gap-2 mb-2">
+                  <input
+                    class="form-check-input border-2 bg-white rounded-1 border-primary p-2"
+                    type="checkbox"
+                    id="underwear"
+                    name="underwear"
+                    value="underwear"
+                  >
+                  <label
+                    class="form-check-label d-block w-100"
+                    for="underwear"
+                  >Title here</label>
+                </div>
+                <div class="form-check d-flex align-items-center gap-2 mb-2">
+                  <input
+                    class="form-check-input border-2 bg-white rounded-1 border-primary p-2"
+                    type="checkbox"
+                    id="mid"
+                    name="mid"
+                    value="mid"
+                  >
+                  <label
+                    class="form-check-label d-block w-100"
+                    for="mid"
+                  >Title here</label>
+                </div>
+                <div class="form-check d-flex align-items-center gap-2 mb-2">
+                  <input
+                    class="form-check-input border-2 bg-whtie rounded-0 border-primary p-2"
+                    type="checkbox"
+                    id="headwear"
+                    name="headwear"
+                    value="headwear"
+                  >
+                  <label
+                    class="form-check-label d-block w-100"
+                    for="headwear"
+                  >Title here</label>
+                </div>
+                <div class="form-check d-flex align-items-center gap-2 mb-2">
+                  <input
+                    class="form-check-input border-2 bg-white rounded-1 border-primary p-2"
+                    type="checkbox"
+                    id="accessories"
+                    name="accessories"
+                    value="accessories"
+                  >
+                  <label
+                    class="form-check-label d-block w-100"
+                    for="accessories"
+                  >Title here</label>
+                </div>
+                <div class="form-check d-flex align-items-center gap-2 mb-2">
+                  <input
+                    class="form-check-input border-2 bg-white rounded-1 border-primary p-2"
+                    type="checkbox"
+                    id="socks"
+                    name="socks"
+                    value="socks"
+                  >
+                  <label
+                    class="form-check-label d-block w-100"
+                    for="socks"
+                  >Title here</label>
+                </div>
+              </div>
+              <div class="">
+                <div
+                  class="accordion"
+                  id="accordionExample"
+                >
+                  <div class="accordion-item">
+                    <h2
+                      class="accordion-header"
+                      id="headingOne"
+                    >
+                      <button
+                        class="accordion-button rounded-2"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne"
+                        aria-expanded="true"
+                        aria-controls="collapseOne"
+                      >
+                        Material
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseOne"
+                      class="accordion-collapse collapse show"
+                      aria-labelledby="headingOne"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        <div class="form-check d-flex align-items-center gap-2 mb-2">
+                          <input
+                            class="form-check-input border-2 bg-white rounded-1 border-primary p-2"
+                            type="checkbox"
+                            id="type-1"
+                            name="type-1"
+                            value="type-1"
+                          >
+                          <label
+                            class="form-check-label d-block w-100"
+                            for="type-1"
+                          >Type 1</label>
+                          <span class="d-block text-primary fs-6 ms-auto opacity-75">(99)</span>
+                        </div>
+                        <div class="form-check d-flex align-items-center gap-2 mb-2">
+                          <input
+                            class="form-check-input border-2 bg-white rounded-1 border-primary p-2"
+                            type="checkbox"
+                            id="type-2"
+                            name="type-2"
+                            value="type-2"
+                          >
+                          <label
+                            class="form-check-label d-block w-100"
+                            for="type-2"
+                          >Type 2</label>
+                        </div>
+                        <div class="form-check d-flex align-items-center gap-2 mb-2">
+                          <input
+                            class="form-check-input border-2 bg-white rounded-1 border-primary p-2"
+                            type="checkbox"
+                            id="type-3"
+                            name="type-3"
+                            value="type-3"
+                          >
+                          <label
+                            class="form-check-label d-block w-100"
+                            for="type-3"
+                          >Type 3</label>
+                        </div>
+                        <div class="form-check d-flex align-items-center gap-2 mb-2">
+                          <input
+                            class="form-check-input border-2 bg-white rounded-1 border-primary p-2"
+                            type="checkbox"
+                            id="type-4"
+                            name="type-4"
+                            value="type-4"
+                          >
+                          <label
+                            class="form-check-label d-block w-100"
+                            for="type-4"
+                          >Type 4</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2
+                      class="accordion-header"
+                      id="headingTwo"
+                    >
+                      <button
+                        class="accordion-button rounded-2 collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo"
+                        aria-expanded="false"
+                        aria-controls="collapseTwo"
+                      >
+                        Size
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseTwo"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="headingTwo"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        <template x-for="size in sizes">
+                          <div class="form-check d-flex align-items-center gap-2 mb-2">
+                            <input
+                              class="form-check-input border-2 bg-white rounded-1 border-primary p-2"
+                              type="checkbox"
+                              :id="size"
+                              :name="size"
+                              :value="size"
+                            >
+                            <label
+                              class="form-check-label d-block w-100"
+                              :for="size"
+                              x-text="size"
+                            ></label>
+                            <span class="d-block text-primary fs-6 ms-auto opacity-75">(99)</span>
+                          </div>
+                        </template>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2
+                      class="accordion-header"
+                      id="headingThree"
+                    >
+                      <button
+                        class="accordion-button rounded-2 collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree"
+                        aria-expanded="false"
+                        aria-controls="collapseThree"
+                      >
+                        Colour
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseThree"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="headingThree"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        <div class="d-flex">
+                          <div class="d-flex flex-wrap gap-2 w-75">
+                            <template x-for="color in colors">
+                              <input
+                                class="form-check-input border-1 rounded-0 border-primary p-3"
+                                type="radio"
+                                name="color"
+                                :value="color"
+                                :style="{backgroundColor: color}"
+                              >
+                            </template>
+                          </div>
+                          <a
+                            href="#"
+                            class="text-primary opacity-75 d-inline-block mt-auto"
+                          >See all</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2
+                      class="accordion-header"
+                      id="headingFour"
+                    >
+                      <button
+                        class="accordion-button rounded-2 collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseFour"
+                        aria-expanded="false"
+                        aria-controls="collapseFour"
+                      >
+                        Style
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseFour"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="headingFour"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        <div class="form-check d-flex align-items-center gap-2 mb-2">
+                          <input
+                            class="form-check-input border-2 bg-white rounded-1 border-primary p-2"
+                            type="checkbox"
+                            id="type-1"
+                            name="type-1"
+                            value="type-1"
+                          >
+                          <label
+                            class="form-check-label d-block w-100"
+                            for="type-1"
+                          >Type 1</label>
+                          <span class="d-block text-primary fs-6 ms-auto opacity-75">(99)</span>
+                        </div>
+                        <div class="form-check d-flex align-items-center gap-2 mb-2">
+                          <input
+                            class="form-check-input border-2 bg-white rounded-1 border-primary p-2"
+                            type="checkbox"
+                            id="type-2"
+                            name="type-2"
+                            value="type-2"
+                          >
+                          <label
+                            class="form-check-label d-block w-100"
+                            for="type-2"
+                          >Type 2</label>
+                        </div>
+                        <div class="form-check d-flex align-items-center gap-2 mb-2">
+                          <input
+                            class="form-check-input border-2 bg-white rounded-1 border-primary p-2"
+                            type="checkbox"
+                            id="type-3"
+                            name="type-3"
+                            value="type-3"
+                          >
+                          <label
+                            class="form-check-label d-block w-100"
+                            for="type-3"
+                          >Type 3</label>
+                        </div>
+                        <div class="form-check d-flex align-items-center gap-2 mb-2">
+                          <input
+                            class="form-check-input border-2 bg-white rounded-1 border-primary p-2"
+                            type="checkbox"
+                            id="type-4"
+                            name="type-4"
+                            value="type-4"
+                          >
+                          <label
+                            class="form-check-label d-block w-100"
+                            for="type-4"
+                          >Type 4</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mb-4">
+                <div class="price-range"></div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="fw-semibold text-black">Price: $40 - $180</span>
+                  <span>Filter</span>
+                </div>
+              </div>
+              <div class="pb-1">
+                <div class="d-flex justify-content-between align-items-center">
+                  <label
+                    class="form-check-label fs-5 d-block mb-2"
+                    for="on-sale"
+                  >On Sale</label>
+                  <div class="form-check form-switch form-switch-md">
+                    <input
+                      class="form-check-input p-2 bg-muted"
+                      type="checkbox"
+                      role="switch"
+                      id="on-sale"
+                    >
+                  </div>
+                </div>
+              </div>
+            </form>
+          </aside>
+          <div class="col col-md-9 ps-2">
+            <div class="d-flex flex-column flex-md-row justify-content-between flex-nowrap mb-4 gap-3 bg-light p-4">
+              <form class="input-group bg-white align-self-start w-50 me-auto">
+                <input
+                  type="text"
+                  class="form-control border-0 bg-white border-bottom rounded-0 text-primary fs-5"
+                  placeholder="Search..."
+                  aria-label="Search"
+                  aria-describedby="search"
+                >
+                <span
+                  class="input-group-text bg-white border-0 border-bottom rounded-0"
+                  id="search"
+                >
+                  <svg
+                    width="21"
+                    height="21"
+                    viewBox="0 0 21 21"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M15.6431 14.0715L19.8645 18.2744C20.053 18.483 20.0437 18.8022 19.8434 18.9994L19.1047 19.735C19.0056 19.8344 18.8707 19.8904 18.73 19.8904C18.5893 19.8904 18.4544 19.8344 18.3553 19.735L14.1339 15.532C14.0172 15.4157 13.9112 15.2891 13.8173 15.1538L13.0258 14.103C11.7162 15.1442 10.0898 15.7111 8.41388 15.7107C4.96034 15.7226 1.95934 13.3507 1.18757 9.99926C0.415791 6.6478 2.07921 3.21121 5.19304 1.72404C8.30686 0.236874 12.0401 1.09604 14.1825 3.79289C16.3249 6.48973 16.3047 10.3045 14.1339 12.9788L15.1893 13.7038C15.3541 13.8088 15.5063 13.9322 15.6431 14.0715ZM3.13727 8.35532C3.13727 11.2568 5.49976 13.609 8.41405 13.609C9.81354 13.609 11.1557 13.0555 12.1453 12.0702C13.1349 11.085 13.6908 9.74867 13.6908 8.35532C13.6908 5.4538 11.3283 3.10166 8.41405 3.10166C5.49976 3.10166 3.13727 5.4538 3.13727 8.35532Z"
+                      fill="black"
+                    />
+                    <path
+                      d="M19.8645 18.2744L20.1427 18.0229L20.1361 18.0156L20.1291 18.0087L19.8645 18.2744ZM15.6431 14.0715L15.3754 14.3342L15.3785 14.3373L15.6431 14.0715ZM19.8434 18.9994L19.5803 18.7323L19.5788 18.7337L19.8434 18.9994ZM19.1047 19.735L18.8401 19.4692L18.839 19.4703L19.1047 19.735ZM18.3553 19.735L18.621 19.4703L18.6199 19.4692L18.3553 19.735ZM14.1339 15.532L13.8692 15.7977L13.8693 15.7978L14.1339 15.532ZM13.8173 15.1538L14.1254 14.94L14.1212 14.934L14.1168 14.9281L13.8173 15.1538ZM13.0258 14.103L13.3253 13.8774L13.0937 13.57L12.7924 13.8095L13.0258 14.103ZM8.41388 15.7107L8.41399 15.3357L8.41258 15.3357L8.41388 15.7107ZM1.18757 9.99926L0.822131 10.0834H0.822131L1.18757 9.99926ZM5.19304 1.72404L5.03142 1.38565L5.19304 1.72404ZM14.1825 3.79289L13.8888 4.02614L14.1825 3.79289ZM14.1339 12.9788L13.8428 12.7424L13.5867 13.0578L13.9216 13.2879L14.1339 12.9788ZM15.1893 13.7038L14.9768 14.013L14.9878 14.02L15.1893 13.7038ZM12.1453 12.0702L11.8807 11.8045L12.1453 12.0702ZM20.1291 18.0087L15.9077 13.8058L15.3785 14.3373L19.5999 18.5402L20.1291 18.0087ZM20.1065 19.2666C20.4499 18.9284 20.466 18.3805 20.1427 18.0229L19.5863 18.5259C19.6401 18.5854 19.6375 18.6759 19.5803 18.7323L20.1065 19.2666ZM19.3692 20.0007L20.108 19.2652L19.5788 18.7337L18.8401 19.4692L19.3692 20.0007ZM18.73 20.2654C18.9701 20.2654 19.2007 20.1699 19.3703 19.9996L18.839 19.4703C18.8104 19.4989 18.7712 19.5154 18.73 19.5154V20.2654ZM18.0897 19.9996C18.2593 20.1699 18.4898 20.2654 18.73 20.2654V19.5154C18.6888 19.5154 18.6496 19.4989 18.621 19.4703L18.0897 19.9996ZM13.8693 15.7978L18.0908 20.0007L18.6199 19.4692L14.3985 15.2663L13.8693 15.7978ZM13.5092 15.3675C13.616 15.5214 13.7365 15.6654 13.8692 15.7977L14.3986 15.2664C14.2978 15.166 14.2064 15.0568 14.1254 14.94L13.5092 15.3675ZM12.7263 14.3287L13.5178 15.3794L14.1168 14.9281L13.3253 13.8774L12.7263 14.3287ZM8.41377 16.0857C10.1744 16.0862 11.883 15.4907 13.2592 14.3966L12.7924 13.8095C11.5493 14.7978 10.0053 15.3361 8.41399 15.3357L8.41377 16.0857ZM0.822131 10.0834C1.63346 13.6066 4.78753 16.0982 8.41518 16.0857L8.41258 15.3357C5.13315 15.347 2.28523 13.0948 1.553 9.91511L0.822131 10.0834ZM5.03142 1.38565C1.75985 2.94816 0.0107372 6.55992 0.822131 10.0834L1.553 9.91511C0.820844 6.73569 2.39858 3.47425 5.35465 2.06243L5.03142 1.38565ZM14.4761 3.55963C12.2247 0.725563 8.30252 -0.176627 5.03142 1.38565L5.35465 2.06243C8.3112 0.650374 11.8554 1.46652 13.8888 4.02614L14.4761 3.55963ZM14.4251 13.2151C16.7067 10.4043 16.7279 6.39422 14.4761 3.55963L13.8888 4.02614C15.9218 6.58525 15.9027 10.2047 13.8428 12.7424L14.4251 13.2151ZM15.4016 13.3947L14.3463 12.6697L13.9216 13.2879L14.9769 14.0129L15.4016 13.3947ZM15.9107 13.8089C15.754 13.6492 15.5796 13.5078 15.3908 13.3875L14.9878 14.02C15.1286 14.1098 15.2586 14.2152 15.3754 14.3342L15.9107 13.8089ZM8.41405 13.234C5.70532 13.234 3.51227 11.0482 3.51227 8.35532H2.76227C2.76227 11.4655 5.29421 13.984 8.41405 13.984V13.234ZM11.8807 11.8045C10.9616 12.7196 9.71461 13.234 8.41405 13.234V13.984C9.91246 13.984 11.3498 13.3914 12.4099 12.336L11.8807 11.8045ZM13.3158 8.35532C13.3158 9.64868 12.7998 10.8894 11.8807 11.8045L12.4099 12.336C13.47 11.2805 14.0658 9.84866 14.0658 8.35532H13.3158ZM8.41405 3.47666C11.1228 3.47666 13.3158 5.66246 13.3158 8.35532H14.0658C14.0658 5.24514 11.5339 2.72666 8.41405 2.72666V3.47666ZM3.51227 8.35532C3.51227 5.66246 5.70532 3.47666 8.41405 3.47666V2.72666C5.29421 2.72666 2.76227 5.24514 2.76227 8.35532H3.51227Z"
+                      fill="white"
+                    />
+                  </svg>
+                </span>
+              </form>
+              <div class="d-flex gap-4 ms-auto">
+                <div class="d-flex align-items-center gap-2">
+                  <span>Sort by Price</span>
+                  <div class="dropdown">
+                    <button
+                      class="btn btn-outline-primary dropdown-toggle rounded-0"
+                      type="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Popular first
+                    </button>
+                    <ul class="dropdown-menu fw-semibold">
+                      <li><a
+                          class="dropdown-item"
+                          href="#"
+                        >Action</a></li>
+                      <li><a
+                          class="dropdown-item"
+                          href="#"
+                        >Another action</a></li>
+                      <li><a
+                          class="dropdown-item"
+                          href="#"
+                        >Something else here</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                  <span>per page</span>
+                  <div class="dropdown">
+                    <button
+                      class="btn btn-outline-primary dropdown-toggle rounded-0"
+                      type="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      20
+                    </button>
+                    <ul class="dropdown-menu fw-semibold">
+                      <li><a
+                          class="dropdown-item"
+                          href="#"
+                        >10</a></li>
+                      <li><a
+                          class="dropdown-item"
+                          href="#"
+                        >20</a></li>
+                      <li><a
+                          class="dropdown-item"
+                          href="#"
+                        >50</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex flex-wrap gap-4 justify-content-center justify-content-lg-start">
+              <template x-for="product in catalogue">
+                <div
+                  data-element="slider-card"
+                  class="p-3 border border-secondary d-flex flex-column align-items-center justify-content-between gap-2 position-relative"
+                >
+                  <div class="d-flex flex-column align-items-center gap-2 text-center">
+                    <img
+                      class="d-block w-100 h-auto"
+                      :src="product.img"
+                      alt=""
+                    >
+                    <span x-text="product.title"></span>
+                    <span
+                      class="fw-semibold text-dark"
+                      x-text="product.price"
+                    ></span>
+                  </div>
+                  <div class="d-flex gap-2">
+                    <a
+                      href="catalogue.html"
+                      class="btn btn-outline-secondary border-2 rounded-0 p-1 d-inline-flex align-items-center justify-content-center w-140 w-lg-200"
+                    >
+                      <span>Learn More</span>
+                    </a>
+                    <button
+                      class="btn btn-secondary rounded-0 p-1"
+                      data-btn="cart-light"
+                    >
+                    </button>
+                  </div>
+                </div>
+              </template>
+            </div>
+            <nav
+              aria-label="catalogue pagination"
+              class="d-flex justify-content-center mt-4"
+            >
+              <ul class="pagination">
+                <li class="page-item active">
+                  <a
+                    class="page-link rounded-0 p-3"
+                    href="#"
+                  >1</a>
+                </li>
+                <li class="page-item bg-light"><a
+                    class="page-link p-3"
+                    href="#"
+                  >2</a></li>
+                <li class="page-item bg-light"><a
+                    class="page-link p-3"
+                    href="#"
+                  >3</a></li>
+                <li class="page-item bg-light"><a
+                    class="page-link p-3"
+                    href="#"
+                  >...</a></li>
+                <li class="page-item bg-light"><a
+                    class="page-link p-3"
+                    href="#"
+                  >30</a></li>
+                <li class="page-item ms-4 bg-light">
+                  <a
+                    class="page-link rounded-0 p-3"
+                    href="#"
+                    aria-label="Next"
+                  >
+                    <span aria-hidden="true"><svg
+                        width="22"
+                        height="22"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M9 6L15 12L9 18"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="bg-pale p-2 p-lg-5">
+      <div class="container-xxl">
+        <div class="d-flex flex-wrap justify-content-between align-items-center gap-2">
+          <nav role="footer navigation">
+            <ul class="d-lg-flex align-items-center gap-4 gap-xxl-5 mb-0">
+              <li>
+                <a
+                  href="/"
+                  class="text-decoration-none fs-7 fs-lg-6 link-hover text-dark fw-medium"
+                >Home</a>
+              </li>
+              <li>
+                <a
+                  href="history.html"
+                  class="text-decoration-none fs-7 fs-lg-6 link-hover text-dark fw-medium"
+                >History</a>
+              </li>
+              <li>
+                <a
+                  href="catalogue.html"
+                  class="text-decoration-none fs-7 fs-lg-6 link-hover text-dark fw-medium"
+                >Products</a>
+              </li>
+            </ul>
+          </nav>
+          <a
+            href="/"
+            data-element="logo"
+          >
+            <img
+              src="../assets/img/design/logo.png"
+              alt=""
+            >
+          </a>
+          <div>
+            <p class="mb-0 fs-6 text-center fw-semibold">Copyright © 2023 - Forxtreme by Klára Sobolčiková</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-dark-secondary p-2">
+      <div class="container-xxl">
+        <a
+          href="#"
+          class="text-decoration-underline text-white d-block text-center"
+        >Designed by Anna Haiduk</a>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

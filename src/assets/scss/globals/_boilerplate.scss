@@ -238,3 +238,28 @@ a {
     height: auto !important;
   }
 }
+
+[data-element='catalogue-banner'] {
+  height: u.rem(355);
+  background-image: url('../img/design/catalogue-banner.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @include u.breakpoint-down(small) {
+    background-position: top;
+  }
+}
+
+.range-slider__point {
+  width: u.rem(4) !important;
+  height: u.rem(20) !important;
+  border-radius: 0 !important;
+  background-color: #000 !important;
+  top: 4px !important;
+  box-shadow: none !important;
+}
+
+.range-slider__container {
+  margin-bottom: u.rem(30) !important;
+  height: 0 !important;
+}

@@ -8,9 +8,9 @@ $theme-colors: (
   'primary': #484646,
   'dark-secondary': #282525,
   'secondary': #6a6363,
-  'dark': #182f43,
+  'dark': #222222,
   'white': #fff,
-  'light': #f3f3f3,
+  'light': #f5f5f5,
   'muted': #b4b4b4,
   'danger': #e31318,
   'orange': #e36709,
@@ -19,6 +19,23 @@ $theme-colors: (
   'dark-blue': #252b42,
 );
 
+$pagination-focus-color: #fff;
+$pagination-focus-bg: #b4b4b4;
+$pagination-focus-box-shadow: 0;
+$pagination-focus-outline: 0;
+$pagination-color: #484646;
+$pagination-active-color: #fff;
+$pagination-active-bg: #6a6363;
+$pagination-active-border-color: transparent;
+
+$form-range-thumb-bg: #6a6363;
+$form-range-thumb-focus-box-shadow: 0 0 0 1px #252b42, #252b42;
+
+$accordion-button-active-bg: transparent;
+$accordion-button-active-color: #6a6363;
+$accordion-button-focus-border-color: #6a6363;
+$accordion-button-focus-box-shadow: 0;
+$accordion-border-radius: 15px;
 $font-family-sans-serif: u.$font;
 
 $form-check-input-checked-bg-image: url("data:image/svg+xml,%3Csvg width='18' height='13' viewBox='0 0 18 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.00023 10.172L16.1922 0.979004L17.6072 2.393L7.00023 13L0.63623 6.636L2.05023 5.222L7.00023 10.172Z' fill='black'/%3E%3C/svg%3E%0A");
@@ -488,8 +505,6 @@ select:invalid {
 }
 
 a {
-  color: #111010 !important;
-
   &.active {
     position: relative;
     padding-bottom: 5px;
@@ -582,5 +597,22 @@ textarea.form-control:focus,
       border: 2px solid #111010;
       position: absolute;
     }
+  }
+}
+
+.accordion-item {
+  margin-bottom: u.rem(16);
+  border-radius: u.rem(5) !important;
+  border-color: #282525;
+
+  .accordion-button {
+    border-radius: u.rem(5) !important;
+    border: 1px solid #282828;
+  }
+
+  border: none;
+
+  .accordion-body {
+    padding-inline: 0;
   }
 }
