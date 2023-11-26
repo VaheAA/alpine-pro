@@ -3,6 +3,7 @@ import '../scss/style.scss';
 import './modules/mobileMenu';
 import './modules/slider';
 import './modules/rangeSlider';
+import './modules/scrollReveal';
 import catalogue from './modules/catalogue';
 import cart from './modules/cart';
 import singleProduct from './modules/singleProduct';
