@@ -19,6 +19,13 @@ body {
   font-family: u.$font;
   background-color: var(--background-color);
   color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
 }
 
 .no-scroll {
@@ -263,4 +270,8 @@ a {
 .range-slider__container {
   margin-bottom: u.rem(30) !important;
   height: 0 !important;
+}
+
+.font-cinzel {
+  font-family: u.$font-cinzel !important;
 }

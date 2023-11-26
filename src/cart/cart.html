@@ -45,7 +45,10 @@
             </li>
           </ul>
         </nav>
-        <a href="cart.html">
+        <a
+          href="cart.html"
+          class="d-none d-sm-inline-block"
+        >
           <img
             src="../assets/img/icons/cart.svg"
             alt=""
@@ -85,6 +88,17 @@
             class="mobile-menu__link text-white link-underline-0"
           >Products</a>
         </li>
+        <li class="mobile-menu__item">
+          <a
+            class="d-inline-block d-sm-none"
+            href="cart.html"
+          >
+            <img
+              src="../assets/img/icons/cart-light.svg"
+              alt=""
+            >
+          </a>
+        </li>
       </ul>
     </nav>
   </div>
@@ -114,8 +128,8 @@
             Continue Shopping
           </a>
         </div>
-        <div class="bg-grayish row flex-column flex-lg-row gx-0 gx-md-5 gy-0 gy-lg-3 w-100">
-          <h1 class="text-center display-5 text-primary">Your shopping cart</h1>
+        <div class="row flex-column flex-lg-row gx-0 gx-md-5 gy-0 gy-lg-3 w-100">
+          <h1 class="text-center display-5 text-primary font-cinzel fw-medium">Your shopping cart</h1>
           <div class="col col-lg-8 p-0">
             <div class="d-flex flex-column gap-4">
               <table
@@ -225,7 +239,7 @@
           </div>
           <div class="col col-lg-4">
             <div class="d-flex flex-column w-100 gap-4">
-              <div class="d-flex flex-column bg-grayish p-4">
+              <div class="d-flex flex-column p-4">
                 <span class="fs-5 text-checkout d-flex justify-content-between align-items-center mb-3 fw-semibold">Do
                   you have a
                   voucher?

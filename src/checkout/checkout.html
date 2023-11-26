@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+  <title>Alpine Pro - Checkout</title>
+</head>
+
+<body>
+  <header class="py-2 py-md-4 header d-flex align-items-center">
+    <div class="container-xxl d-flex justify-content-between align-items-center">
+      <a
+        href="/"
+        data-element="logo"
+      >
+        <img
+          src="../assets/img/design/logo.png"
+          alt=""
+        >
+      </a>
+      <div class="d-flex align-items-center gap-2 gap-xxl-5">
+        <nav class="d-none d-lg-block">
+          <ul class="d-lg-flex align-items-center gap-4 gap-xxl-5 mb-0">
+            <li>
+              <a
+                href="/"
+                class="text-decoration-none fs-7 fs-lg-6 link-hover text-dark fw-medium"
+              >Home</a>
+            </li>
+            <li>
+              <a
+                href="history.html"
+                class="text-decoration-none fs-7 fs-lg-6 link-hover text-dark fw-medium"
+              >History</a>
+            </li>
+            <li>
+              <a
+                href="catalogue.html"
+                class="text-decoration-none fs-7 fs-lg-6 link-hover text-dark fw-medium"
+              >Products</a>
+            </li>
+          </ul>
+        </nav>
+        <a
+          href="cart.html"
+          class="d-none d-sm-inline-block"
+        >
+          <img
+            src="../assets/img/icons/cart.svg"
+            alt=""
+          >
+        </a>
+      </div>
+      <div class="burger">
+        <button
+          id="menu-btn"
+          class="burger__btn"
+        >
+          <span class="burger__line burger__line-top"></span>
+          <span class="burger__line burger__line-middle"></span>
+          <span class="burger__line burger__line-bottom"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div class="mobile-menu">
+    <nav class="mobile-menu__nav">
+      <ul class="mobile-menu__list">
+        <li class="mobile-menu__item">
+          <a
+            href="/"
+            class="mobile-menu__link text-white link-underline-0"
+          >Home</a>
+        </li>
+        <li class="mobile-menu__item">
+          <a
+            href="history.html"
+            class="mobile-menu__link text-white link-underline-0"
+          >History</a>
+        </li>
+        <li class="mobile-menu__item">
+          <a
+            href="catalogue.html"
+            class="mobile-menu__link text-white link-underline-0"
+          >Products</a>
+        </li>
+        <li class="mobile-menu__item">
+          <a
+            class="d-inline-block d-sm-none"
+            href="cart.html"
+          >
+            <img
+              src="../assets/img/icons/cart-light.svg"
+              alt=""
+            >
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <main>
+    <section class="mt-5 mb-5">
+      <div class="container-md">
+        <div class="mb-2 mb-sm-5">
+          <a
+            class="d-flex align-items-center gap-2 text-primary fs-6"
+            href="cart.html"
+          >
+            <svg
+              width="32"
+              height="16"
+              viewBox="0 0 32 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0.292892 7.29289C-0.0976295 7.68342 -0.0976295 8.31658 0.292892 8.70711L6.65685 15.0711C7.04738 15.4616 7.68054 15.4616 8.07107 15.0711C8.46159 14.6805 8.46159 14.0474 8.07107 13.6569L2.41421 8L8.07107 2.34315C8.46159 1.95262 8.46159 1.31946 8.07107 0.928932C7.68054 0.538408 7.04738 0.538408 6.65685 0.928932L0.292892 7.29289ZM32 7L1 7V9L32 9V7Z"
+                fill="#111010"
+              />
+            </svg>
+            Return
+          </a>
+        </div>
+        <h1 class="text-center mb-5 fw-medium font-cinzel text-primary">Your Order</h1>
+        <div class="row-cols-1 row flex-lg-nowrap gap-2">
+          <form
+            id="checkout"
+            class="col col-lg-6"
+          >
+            <div class="row-cols-1 row flex-lg-nowrap gap-3">
+              <div class="col px-3 py-4">
+                <span class="d-block mb-5 fw-medium fs-5 font-manrope">Please fill the information</span>
+                <div class="form-floating mb-3">
+                  <input
+                    type="text"
+                    class="form-control rounded-0"
+                    id="firstname"
+                    required
+                    placeholder="First name*"
+                  >
+                  <label
+                    class="text-muted fs-6"
+                    for="firstname"
+                  >First name*</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <input
+                    required
+                    type="text"
+                    class="form-control rounded-0"
+                    id="lastname"
+                    placeholder="Last name*"
+                  >
+                  <label
+                    class="text-muted fs-6"
+                    for="lastname"
+                  >Last name*</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <input
+                    required
+                    type="email"
+                    class="form-control rounded-0"
+                    id="email"
+                    placeholder="Email*"
+                    required
+                  >
+                  <label
+                    class="text-muted fs-6"
+                    for="email"
+                  >Email*</label>
+                </div>
+                <div class="d-flex gap-3">
+                  <div class="form-floating mb-3 w-100">
+                    <input
+                      required
+                      type="text"
+                      class="form-control rounded-0"
+                      id="street"
+                      placeholder="Street*"
+                    >
+                    <label
+                      class="text-muted fs-6"
+                      for="street"
+                    >Street*</label>
+                  </div>
+                </div>
+                <div class="d-flex gap-3">
+                  <div class="form-floating mb-3 w-100">
+                    <input
+                      type="text"
+                      required
+                      class="form-control rounded-0"
+                      id="postcode"
+                      placeholder="PostCode*"
+                    >
+                    <label
+                      class="text-muted fs-6"
+                      for="postcode"
+                    >PostCode*</label>
+                  </div>
+                  <div class="form-floating mb-3 w-100">
+                    <input
+                      type="text"
+                      class="form-control rounded-0"
+                      id="location"
+                      select
+                      required
+                      placeholder="Location*"
+                    >
+                    <label
+                      class="text-muted fs-6"
+                      for="location"
+                    >Location*</label>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <select
+                    required
+                    class="form-select form-select-lg mb-3 rounded-0 fs-6 border-1 border-secondary"
+                    aria-label=".form-select-lg country"
+                  >
+                    <option
+                      selected
+                      disabled
+                      hidden
+                      value=""
+                    >Country
+                    </option>
+                    <option value="
+                1">One
+                    </option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                </div>
+                <div class="mb-5">
+                  <div class="form-floating">
+                    <input
+                      type="text"
+                      class="form-control rounded-0"
+                      id="phone"
+                      placeholder="Phone number"
+                    >
+                    <label
+                      class="text-muted fs-6"
+                      for="phone"
+                    >Phone</label>
+                    <span class="text-muted fs-7 d-inline-block mt-2">*Required field</span>
+                  </div>
+                </div>
+                <div class="form-check checkbox d-flex align-items-center gap-4 mb-3">
+                  <input
+                    class="form-check-input border-primary border-2"
+                    type="checkbox"
+                    value=""
+                    id="differentAddress"
+                    data-checkbox="checkbox-1"
+                  >
+                  <label
+                    class="form-check-label fs-7 fw-medium"
+                    for="differentAddress"
+                  >
+                    Shipping Address is Different
+                  </label>
+                </div>
+                <div class="form-floating mb-3">
+                  <input
+                    type="text"
+                    required
+                    class="form-control rounded-0"
+                    id="fistname-2"
+                    placeholder="First name*"
+                  >
+                  <label
+                    class="text-muted fs-6"
+                    for="fistname-2"
+                  >First name*</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <input
+                    type="text"
+                    required
+                    class="form-control rounded-0"
+                    id="lastname-2"
+                    placeholder="Last name*"
+                  >
+                  <label
+                    class="text-muted fs-6"
+                    for="lastname-2"
+                  >Last name*</label>
+                </div>
+                <div class="d-flex gap-3">
+                  <div class="form-floating mb-3 w-100">
+                    <input
+                      type="text"
+                      required
+                      class="form-control rounded-0"
+                      id="street-2"
+                      placeholder="Street*"
+                    >
+                    <label
+                      class="text-muted fs-6"
+                      for="street-2"
+                    >Street*</label>
+                  </div>
+                </div>
+                <div class="d-flex gap-3">
+                  <div class="form-floating mb-3 w-100">
+                    <input
+                      type="text"
+                      required
+                      class="form-control rounded-0"
+                      id="postcode-2"
+                      placeholder="PostCode*"
+                    >
+                    <label
+                      class="text-muted fs-6"
+                      for="postcode-2"
+                    >PostCode*</label>
+                  </div>
+                  <div class="form-floating mb-3 w-100">
+                    <input
+                      type="text"
+                      required
+                      class="form-control rounded-0"
+                      id="location-2"
+                      placeholder="Location*"
+                    >
+                    <label
+                      class="text-muted fs-6"
+                      for="location-2"
+                    >Location*</label>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <select
+                    required
+                    class="form-select form-select-lg mb-3 rounded-0 fs-6 border-1 border-secondary"
+                    aria-label=".form-select-lg country-2"
+                  >
+                    <option
+                      disabled
+                      selected
+                      hidden
+                      value=""
+                    >Country
+                    </option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </form>
+          <div class="col col-lg-6">
+            <div class=" p-3 mb-4">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <span class="d-block mb-5 fw-medium fs-5 font-manrope">Your order</span>
+              </div>
+              <div class="d-flex flex-column gap-5 mb-4">
+                <div class="d-flex gap-3 align-items-center">
+                  <img
+                    src="../assets/img/content/cart/cart-1.jpg"
+                    alt=""
+                  >
+                  <div class="d-flex flex-column">
+                    <span class="text-mute fw-medium text-checkout">Product name</span>
+                    <span class="fw-light fs-7">Lorem ipsum</span>
+                  </div>
+                  <span class="text-checkout d-block ms-auto">198.00</span>
+                </div>
+                <div class="d-flex gap-3 align-items-center">
+                  <img
+                    src="../assets/img/content/cart/cart-1.jpg"
+                    alt=""
+                  >
+                  <div class="d-flex flex-column">
+                    <span class="text-mute fw-medium text-checkout">Product name</span>
+                    <span class="fw-light fs-7">Lorem ipsum</span>
+                  </div>
+                  <span class="text-checkout d-block ms-auto">198.00</span>
+                </div>
+                <div class="d-flex gap-3 align-items-center">
+                  <img
+                    src="../assets/img/content/cart/cart-1.jpg"
+                    alt=""
+                  >
+                  <div class="d-flex flex-column">
+                    <span class="text-mute fw-medium text-checkout">Product name</span>
+                    <span class="fw-light fs-7">Lorem ipsum</span>
+                  </div>
+                  <span class="text-checkout d-block ms-auto">198.00</span>
+                </div>
+              </div>
+            </div>
+            <div class="row row-cols-1 row-cols-lg-2">
+              <div class="col col-lg-6 d-flex flex-column">
+                <p class="fs-5">Payment</p>
+                <div class="col px-3 pb-5 pt-3 h-auto flex-grow-0">
+                  <div class="form-check d-flex gap-2 align-items-center mb-4">
+                    <input
+                      data-radio="checkout"
+                      class="form-check-input"
+                      type="radio"
+                      form="checkout"
+                      checked
+                      id="creditCard"
+                      name="transferType"
+                    >
+                    <label
+                      class="form-check-label"
+                      for="creditCard"
+                    >
+                      Credit card
+                    </label>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <input
+                      type="text"
+                      required
+                      form="checkout"
+                      class="form-control rounded-0"
+                      id="firstname-card"
+                      placeholder="First name"
+                    >
+                    <label
+                      class="text-muted fs-6"
+                      for="firstname-card"
+                    >First name*</label>
+                  </div>
+                  <div class="d-flex gap-3">
+                    <div class="form-floating mb-3 w-100">
+                      <input
+                        type="text"
+                        class="form-control rounded-0"
+                        form="checkout"
+                        id="date"
+                        placeholder="Expiry Date*"
+                      >
+                      <label
+                        class="text-muted fs-6"
+                        for="date"
+                      >Expiry Date*</label>
+                    </div>
+                    <div class="form-floating mb-3 w-100">
+                      <input
+                        type="text"
+                        form="checkout"
+                        class="form-control rounded-0"
+                        id="cvv"
+                        placeholder="CVC / CVV*"
+                      >
+                      <label
+                        class="text-muted fs-6"
+                        for="cvv"
+                      >CVC / CVV*</label>
+                    </div>
+                  </div>
+                  <div class="form-floating mb-3 w-100">
+                    <input
+                      type="text"
+                      class="form-control rounded-0"
+                      form="checkout"
+                      id="cardholder"
+                      placeholder="Name of Cardholder*"
+                    >
+                    <label
+                      class="text-muted fs-6"
+                      for="cardholder"
+                    >Name of Cardholder*</label>
+                  </div>
+                  <div class="form-check d-flex gap-2 align-items-center mb-4">
+                    <input
+                      data-radio="checkout"
+                      class="form-check-input form-check-input-lg"
+                      form="checkout"
+                      type="radio"
+                      value=""
+                      id="directTransfer"
+                      name="transferType"
+                    >
+                    <label
+                      class="form-check-label"
+                      for="directTransfer"
+                    >
+                      Direct bank transfer
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="p-3 border border-1 border-secondary h-100">
+                <p class="fs-5">Cart Total</p>
+                <div class="mb-3">
+                  <div class="d-flex flex-column">
+                    <div class="d-flex justify-content-between">
+                      <span class="fw-medium">Subtotal</span>
+                      <span class="fw-medium">138,00 EUR</span>
+                    </div>
+                    <div class="d-flex justify-content-between fs-7">
+                      <span class="text-muted">shipping</span>
+                      <span class="text-muted">5,91 EUR</span>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <div class="d-flex justify-content-between mb-1">
+                    <span class="fw-medium">Total</span>
+                    <span class="fw-medium">143,91 EUR</span>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <span class="text-muted fs-7">(VAT included.)</span>
+                  </div>
+                </div>
+                <div class="form-check d-flex justify-content-evenly align-items-center gap-2 mb-3">
+                  <input
+                    class="form-check-input border-primary border-2"
+                    type="checkbox"
+                    value=""
+                    id="terms"
+                    required
+                    data-checkbox="checkbox-1"
+                  >
+                  <label
+                    class="form-check-label fs-7 w-100"
+                    for="terms"
+                  >
+                    I have read and agree to website <span class="text-danger"> terms and conditions*</span>
+                  </label>
+                </div>
+                <button
+                  type="submit"
+                  form="checkout"
+                  class="btn btn-secondary btn-lg w-100 rounded-0 mb-2"
+                  onclick="(e) => e.preventDefault(); window.open('confirmation.html')"
+                >Place order</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="bg-pale p-2 p-lg-5">
+      <div class="container-xxl">
+        <div class="d-flex flex-wrap justify-content-between align-items-center gap-2">
+          <nav role="footer navigation">
+            <ul class="d-lg-flex align-items-center gap-4 gap-xxl-5 mb-0">
+              <li>
+                <a
+                  href="/"
+                  class="text-decoration-none fs-7 fs-lg-6 link-hover text-dark fw-medium"
+                >Home</a>
+              </li>
+              <li>
+                <a
+                  href="history.html"
+                  class="text-decoration-none fs-7 fs-lg-6 link-hover text-dark fw-medium"
+                >History</a>
+              </li>
+              <li>
+                <a
+                  href="catalogue.html"
+                  class="text-decoration-none fs-7 fs-lg-6 link-hover text-dark fw-medium"
+                >Products</a>
+              </li>
+            </ul>
+          </nav>
+          <a
+            href="/"
+            data-element="logo"
+          >
+            <img
+              src="../assets/img/design/logo.png"
+              alt=""
+            >
+          </a>
+          <div>
+            <p class="mb-0 fs-6 text-center fw-semibold">Copyright © 2023 - Forxtreme by Klára Sobolčiková</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-dark-secondary p-2">
+      <div class="container-xxl">
+        <a
+          href="#"
+          class="text-decoration-underline text-white d-block text-center"
+        >Designed by Anna Haiduk</a>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

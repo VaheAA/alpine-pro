@@ -45,7 +45,10 @@
             </li>
           </ul>
         </nav>
-        <a href="cart.html">
+        <a
+          href="cart.html"
+          class="d-none d-sm-inline-block"
+        >
           <img
             src="../assets/img/icons/cart.svg"
             alt=""
@@ -84,6 +87,17 @@
             href="catalogue.html"
             class="mobile-menu__link text-white link-underline-0"
           >Products</a>
+        </li>
+        <li class="mobile-menu__item">
+          <a
+            class="d-inline-block d-sm-none"
+            href="cart.html"
+          >
+            <img
+              src="../assets/img/icons/cart-light.svg"
+              alt=""
+            >
+          </a>
         </li>
       </ul>
     </nav>
@@ -210,7 +224,7 @@
           </div>
           <div class="col col-sm-6">
             <div class="mb-3">
-              <h1 class="display-5 fw-bold mb-3 text-primary">Product Title</h1>
+              <h1 class="display-5 fw-medium mb-3 text-primary font-cinzel">Product Title</h1>
               <span class="fs-5 fw-bolder text-primary">199,50 €</span>
             </div>
             <div class="mb-3">
@@ -306,10 +320,10 @@
     <!-- tabs -->
     <section class="pt-5 pt-lg-10 pb-3 pb-lg-5">
       <div class="container-md">
-        <ul class="nav nav-tabs justify-content-center gap-2 gap-lg-5 mb-4 border-0">
+        <ul class="nav nav-tabs justify-content-center gap-2 gap-lg-5 mb-4">
           <li class="nav-item">
             <a
-              class="nav-link tab-link  tab-link-active position-relative fs-5 fw-semibold"
+              class="nav-link tab-link tab-link-active position-relative fs-5"
               aria-current="page"
               href="#description"
               @click="selectTab($el)"
@@ -317,7 +331,7 @@
           </li>
           <li class="nav-item">
             <a
-              class="nav-link tab-link position-relative fs-5 fw-semibold"
+              class="nav-link tab-link position-relative fs-5"
               href="#additional"
               @click="selectTab($el)"
             >Additional info</a>
@@ -360,7 +374,8 @@
     <!-- related products -->
     <section class="pt-lg-5 pb-5">
       <div class="container-xxl">
-        <h2 class="display-5 text-uppercase text-center mb-4">You might also like</h2>
+        <h2 class="display-5 text-uppercase text-center mb-4 font-cinzel fw-medium text-primary">You might also like
+        </h2>
         <div class="position-relative">
           <div class="swiper">
             <!-- Additional required wrapper -->
