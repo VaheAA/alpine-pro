@@ -5,6 +5,7 @@ import './modules/slider';
 import './modules/rangeSlider';
 import catalogue from './modules/catalogue';
 import cart from './modules/cart';
+import singleProduct from './modules/singleProduct';
 import * as bootstrap from 'bootstrap';
 
 import Alpine from 'alpinejs';
@@ -12,5 +13,6 @@ import Alpine from 'alpinejs';
 window.Alpine = Alpine;
 Alpine.data('catalogue', catalogue);
 Alpine.data('cart', cart);
+Alpine.data('singleProduct', singleProduct);
 
 Alpine.start();

@@ -1,0 +1,135 @@
+@use '../util' as u;
+
+.slider {
+  color: #fff;
+  height: u.rem(516);
+
+  @include u.breakpoint-down(small) {
+    height: 100%;
+  }
+}
+
+.slider .swiper-container {
+  width: 100%;
+  max-width: 100%;
+  max-height: u.rem(516);
+  min-height: 0;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.slider .swiper-slide {
+  max-width: 400px;
+}
+
+.slider__flex {
+  display: flex;
+  align-items: flex-start;
+}
+
+.slider__col {
+  display: flex;
+  flex-direction: column;
+  width: u.rem(150);
+  margin-right: u.rem(32);
+
+  @include u.breakpoint-down(small) {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+.slider__prev {
+  margin-bottom: 24px;
+}
+
+.slider__prev,
+.slider__next {
+  cursor: pointer;
+  text-align: center;
+  height: u.rem(25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding: 0 !important;
+
+  img {
+    width: 15%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.slider__prev:focus,
+.slider__next:focus {
+  outline: none;
+}
+
+.slider__thumbs {
+  .swiper-container {
+    max-height: u.rem(465);
+    overflow: hidden;
+  }
+
+  .swiper-slide {
+    width: u.rem(96) !important;
+    height: u.rem(96) !important;
+  }
+
+  @include u.breakpoint-down(small) {
+    height: auto;
+    min-width: calc(144px * 2.5);
+  }
+}
+
+.slider__thumbs .slider__image {
+  transition: 0.25s;
+  width: u.rem(94);
+  height: u.rem(94);
+  padding: 0;
+}
+
+.slider__thumbs .swiper-slide-thumb-active .slider__image {
+  border: 2px solid #484646;
+  height: u.rem(94);
+  width: u.rem(94);
+}
+
+.swiper-thumbs {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.slider__images {
+  @include u.breakpoint-down(small) {
+    height: auto;
+  }
+}
+
+.slider__images .slider__image img {
+  transition: 3s;
+}
+
+.slider__images .slider__image:hover img {
+  transform: scale(1.1);
+}
+
+.slider__image {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  padding: u.rem(20);
+}
+
+.slider__image img {
+  display: block;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}

@@ -15,3 +15,20 @@
     color: #fff !important;
   }
 }
+
+[data-btn='size'] {
+  width: u.rem(42) !important;
+  height: u.rem(33) !important;
+
+  &.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+}
+
+[data-btn='checkout'] {
+  width: u.rem(25);
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
