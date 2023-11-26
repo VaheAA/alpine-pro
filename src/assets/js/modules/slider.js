@@ -19,7 +19,7 @@ const sliderThumbs = new Swiper('.slider__thumbs .swiper-container', {
       mousewheel: false,
       direction: 'horizontal',
     },
-    768: {
+    920: {
       direction: 'vertical',
     },
   },
