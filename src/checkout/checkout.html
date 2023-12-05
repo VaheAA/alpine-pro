@@ -23,7 +23,7 @@
         >
       </a>
       <div class="d-flex align-items-center gap-2 gap-xxl-5">
-        <nav class="d-none d-lg-block">
+        <nav class="d-none d-lg-block nav">
           <ul class="d-lg-flex align-items-center gap-4 gap-xxl-5 mb-0">
             <li>
               <a
@@ -37,11 +37,161 @@
                 class="text-decoration-none fs-7 fs-lg-6 link-hover text-dark fw-medium"
               >History</a>
             </li>
-            <li>
+            <li class="nav-item dropdown has-megamenu">
               <a
                 href="catalogue.html"
                 class="text-decoration-none fs-7 fs-lg-6 link-hover text-dark fw-medium"
               >Products</a>
+              <div
+                class="dropdown-menu megamenu mx-auto"
+                role="menu"
+                x-data="megamenu"
+              >
+                <div class="container-md">
+                  <div class="row g-3">
+                    <!-- Menu -->
+                    <div class="col-8">
+                      <div class="col-megamenu">
+                        <!-- Tabs -->
+                        <ul class="nav nav-tabs gap-3 mb-4 border-0">
+                          <li class="nav-item">
+                            <a
+                              class="nav-link tab-link tab-link-active position-relative fs-6 fw-bold text-capitalize text-secondary"
+                              aria-current="page"
+                              href="#all"
+                              @click="selectTab($el)"
+                            >All</a>
+                          </li>
+                          <li class="nav-item">
+                            <a
+                              class="nav-link tab-link position-relative fs-6 fw-bold text-capitalize text-secondary"
+                              href="#men"
+                              @click="selectTab($el)"
+                            >Men</a>
+                          </li>
+                          <li class="nav-item">
+                            <a
+                              class="nav-link tab-link position-relative fs-6 fw-bold text-capitalize text-secondary"
+                              href="#women"
+                              @click="selectTab($el)"
+                            >Women</a>
+                          </li>
+                          <li class="nav-item">
+                            <a
+                              class="nav-link tab-link position-relative fs-6 fw-bold text-capitalize text-secondary"
+                              href="#kids"
+                              @click="selectTab($el)"
+                            >Kids</a>
+                          </li>
+                        </ul>
+                        <!-- Menu Items -->
+                        <div class="row text-capitalize">
+                          <div class="col-4">
+                            <span class="d-block mb-3 fw-bold text-dark-blue">Clothing</span>
+                            <ul class="px-0">
+                              <li class="my-3">
+                                <a href="#">Jackets and Vests</a>
+                              </li>
+                              <li class="my-3">
+                                <a href="#">Hoodies and Sweaters</a>
+                              </li>
+                              <li class="my-3">
+                                <a href="#">T-Shirts</a>
+                              </li>
+                              <li class="my-3">
+                                <a href="#">Pants</a>
+                              </li>
+                              <li class="my-3">
+                                <a href="#">Shorts</a>
+                              </li>
+                              <li class="my-3">
+                                <a href="#">Dresses and Skirts</a>
+                              </li>
+                              <li class="my-3">
+                                <a href="#">Caps</a>
+                              </li>
+                              <li class="my-3">
+                                <a href="#">Socks</a>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="col-4">
+                            <div>
+                              <span class="d-block mb-3 fw-bold text-dark-blue">Equipment</span>
+                              <ul class="px-0 mb-4">
+                                <li class="my-3">
+                                  <a href="#">Backpacks and Bags</a>
+                                </li>
+                                <li class="my-3">
+                                  <a href="#">Tents</a>
+                                </li>
+                                <li class="my-3">
+                                  <a href="#">Mats</a>
+                                </li>
+                                <li class="my-3">
+                                  <a href="#">Sleeping Bags</a>
+                                </li>
+                                <li class="my-3">
+                                  <a href="#">Trekking Poles</a>
+                                </li>
+                              </ul>
+                            </div>
+                            <div>
+                              <span class="d-block mb-3 fw-bold text-dark-blue">Accessories</span>
+                              <ul class="px-0">
+                                <li>
+                                  <a href="#">Sandals</a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="col-4">
+                            <span class="d-block mb-3 fw-bold text-dark-blue">By activity</span>
+                            <ul class="px-0">
+                              <li class="my-3">
+                                <a href="#">Camping</a>
+                              </li>
+                              <li class="my-3">
+                                <a href="#">Active Movement</a>
+                              </li>
+                              <li class="my-3">
+                                <a href="#">Hiking and Trekking</a>
+                              </li>
+                              <li class="my-3">
+                                <a href="#">Winter Sports</a>
+                              </li>
+                              <li class="my-3">
+                                <a href="#">Travel</a>
+                              </li>
+                              <li class="my-3">
+                                <a href="#">Run and Bike</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- CTA -->
+                    <div class="col-4 position-relative h-100">
+                      <img
+                        class="w-100 d-block"
+                        src="../assets/img/content/megamenu.png"
+                        alt=""
+                      >
+                      <div class="position-absolute bottom-0 p-3 text-white d-flex flex-column gap-2">
+                        <span class="block w-100 fs-3 text-primary fw-medium">Take a look at the new summer 2023
+                          collection</span>
+                        <a
+                          href="catalogue.html"
+                          target="_blank"
+                          class="btn btn-lg btn-secondary rounded-0 align-self-baseline"
+                        >Learn
+                          more</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </li>
           </ul>
         </nav>
