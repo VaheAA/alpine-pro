@@ -320,3 +320,7 @@ a {
   color: #3e8e00 !important;
   font-weight: bolder !important;
 }
+
+.breadcrumb-item + .breadcrumb-item::before {
+  color: #000 !important;
+}

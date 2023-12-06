@@ -10,7 +10,7 @@
   <title>Alpine pro - History</title>
 </head>
 
-<body>
+<body x-data="search">
   <header class="py-2 py-md-4 header d-flex align-items-center">
     <div class="container-xxl d-flex justify-content-between align-items-center">
       <a
@@ -195,6 +195,12 @@
             </li>
           </ul>
         </nav>
+        <button @mouseenter="openSearch">
+          <img
+            src="../assets/img/icons/search.svg"
+            alt=""
+          >
+        </button>
         <a
           href="cart.html"
           class="d-none d-sm-inline-block"
@@ -251,6 +257,109 @@
         </li>
       </ul>
     </nav>
+  </div>
+  <!-- search -->
+  <div
+    class="search py-5 position-fixed top-0 start-0 end-0 mt-8 w-100 bg-white z-3"
+    x-show="isSearchOpen"
+    style="min-height: 580px;"
+    x-transition
+    @mouseleave="openSearch"
+  >
+    <div class="container-xxl">
+      <form action="#">
+        <div class="input-group mb-3">
+          <span class="input-group-text border-end-0 rounded-0 border-primary">
+            <img
+              src="../assets/img/icons/search.svg"
+              alt=""
+            >
+          </span>
+          <input
+            type="text"
+            class="form-control border-start-0 border-end-0 rounded-0 border-primary"
+            x-on:input="onSearch"
+          >
+          <button
+            type="button"
+            class="input-group-text border-start-0 rounded-0 border-primary"
+          >X</button>
+        </div>
+      </form>
+      <div
+        id="search-results"
+        class="mt-5"
+      >
+        <div class="row">
+          <div class="col col-4">
+            <div class="d-flex flex-column gap-2 mb-5">
+              <span class="fs-6 fw-bold text-primary mb-3 d-inline-block">Brand</span>
+              <template x-for="brand in brands">
+                <div class="d-flex align-items-center gap-3">
+                  <img
+                    src="../assets/img/content/hannah.jpg"
+                    alt=""
+                  >
+                  <span
+                    class="fs-7"
+                    x-text="brand"
+                  >
+                  </span>
+                </div>
+              </template>
+            </div>
+            <div class="d-flex flex-column gap-2">
+              <span class="fs-6 fw-bold text-primary mb-3 d-inline-block">Search suggestions</span>
+              <div class="d-flex flex-column gap-3">
+                <template x-for="sugg in searchSuggestions">
+                  <a
+                    href="#"
+                    class="text-primary fs-7"
+                  >
+                    <strong>Sugg</strong>uestion 1</a>
+                </template>
+              </div>
+            </div>
+          </div>
+          <div class="col col-8 p-0">
+            <span class="fs-6 fw-bold text-primary">Products</span>
+            <div class="row mt-3">
+              <template x-for="item in filteredSearch">
+                <a
+                  href="product.html"
+                  class="col-2 border-secondary-subtle border border-1 p-2 text-primary m-2"
+                >
+                  <img
+                    class="d-block mb-2"
+                    src="../assets/img/content/products/product-1.png"
+                    alt=""
+                  >
+                  <span
+                    class="fs-7 d-block text-center"
+                    x-text="item.title"
+                  ></span>
+                  <div class="d-flex justify-content-center gap-1">
+                    <span class="fs-7">Brand:</span>
+                    <span
+                      class="fs-7 fw-semibold"
+                      x-text="item.brand"
+                    ></span>
+                  </div>
+                </a>
+              </template>
+            </div>
+            <a
+              x-show="filteredSearch.length > 0"
+              href="product.html"
+              class="btn btn-outline-secondary fs-6 fw-semibold border-2 rounded-0 p-2 align-items-center justify-content-center w-50 mt-4"
+              style="margin-left: -5px;"
+            >
+              See all search results
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
   <main>
     <!-- frames -->

@@ -8,6 +8,7 @@ import megamenu from './modules/megamenu';
 import catalogue from './modules/catalogue';
 import cart from './modules/cart';
 import singleProduct from './modules/singleProduct';
+import search from './modules/search';
 import * as bootstrap from 'bootstrap';
 
 import Alpine from 'alpinejs';
@@ -17,6 +18,7 @@ Alpine.data('catalogue', catalogue);
 Alpine.data('cart', cart);
 Alpine.data('singleProduct', singleProduct);
 Alpine.data('megamenu', megamenu);
+Alpine.data('search', search);
 
 Alpine.start();
 
