@@ -12,7 +12,7 @@
 
 <body x-data="search">
   <header class="py-2 py-md-4 header d-flex align-items-center">
-    <div class="container-xxl d-flex justify-content-between align-items-center">
+    <div class="container-xxl d-flex justify-content-end justify-content-md-between align-items-center">
       <a
         href="/"
         data-element="logo"
@@ -22,7 +22,7 @@
           alt=""
         >
       </a>
-      <div class="d-flex align-items-center gap-2 gap-xxl-5">
+      <div class="d-flex align-items-center gap-2 gap-xxl-5 me-4">
         <nav class="d-none d-lg-block nav">
           <ul class="d-lg-flex align-items-center gap-4 gap-xxl-5 mb-0">
             <li>
@@ -195,7 +195,7 @@
             </li>
           </ul>
         </nav>
-        <button @mouseenter="openSearch">
+        <button @click="openSearch">
           <img
             src="../assets/img/icons/search.svg"
             alt=""
@@ -290,8 +290,8 @@
         id="search-results"
         class="mt-5"
       >
-        <div class="row">
-          <div class="col col-4">
+        <div class="row row-cols-1">
+          <div class="col col-sm-4">
             <div class="d-flex flex-column gap-2 mb-5">
               <span class="fs-6 fw-bold text-primary mb-3 d-inline-block">Brand</span>
               <template x-for="brand in brands">
@@ -321,13 +321,13 @@
               </div>
             </div>
           </div>
-          <div class="col col-8 p-0">
+          <div class="col col-sm-8 p-sm-0">
             <span class="fs-6 fw-bold text-primary">Products</span>
             <div class="row mt-3">
               <template x-for="item in filteredSearch">
                 <a
                   href="product.html"
-                  class="col-2 border-secondary-subtle border border-1 p-2 text-primary m-2"
+                  class="d-none d-sm-block col-2 border-secondary-subtle border border-1 p-2 text-primary m-2"
                 >
                   <img
                     class="d-block mb-2"
@@ -347,11 +347,22 @@
                   </div>
                 </a>
               </template>
+              <template
+                x-for="item in filteredSearch"
+                class="d-block d-none"
+              >
+                <a
+                  class="d-block d-sm-none text-primary fs-7 mb-1"
+                  href="product.html"
+                >
+                  <span x-text="item.title"></span>/<span x-text="item.brand"></span>
+                </a>
+              </template>
             </div>
             <a
               x-show="filteredSearch.length > 0"
               href="product.html"
-              class="btn btn-outline-secondary fs-6 fw-semibold border-2 rounded-0 p-2 align-items-center justify-content-center w-50 mt-4"
+              class="btn btn-outline-secondary fs-6 fw-semibold border-2 rounded-0 p-2 align-items-center justify-content-center w-100 w-sm-50 mt-4"
               style="margin-left: -5px;"
             >
               See all search results
